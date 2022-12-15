@@ -1,64 +1,147 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Описание проекта">
+  <title>ProjectName</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__wrapper container">
+      <nav class="user-nav">
+        <div class="user-nav__city-search">
+          <a href="#">
+            <img src="img/svg/logo.svg" width="88" height="24" alt="Логотип">
+          </a>
+          <div class="user-nav__city">
+            <img src="img/svg/city.svg" width="32" height="32" alt="Иконка выбора города">
+            <span>Москва</span>
           </div>
-        </section>
-      </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
-    </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
         </div>
+        <div class="user-nav__search">
+          <input type="text" name="city" id="city">
+        </div>
+        <div class="user-nav__lk">
+          <div>
+            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.5 16.0125L8.4125 15.0225C4.55 11.52 2 9.21 2 6.375C2 4.065 3.815 2.25 6.125 2.25C7.43 2.25 8.6825 2.8575 9.5 3.8175C10.3175 2.8575 11.57 2.25 12.875 2.25C15.185 2.25 17 4.065 17 6.375C17 9.21 14.45 11.52 10.5875 15.03L9.5 16.0125Z"
+                fill="#A7A7A7" />
+            </svg>
+            <span>1</span>
+          </div>
+          <div class="user-nav__avatar">
+            <span>Екатерина</span>
+            <img src="img/avatar.jpg" width="32" height="32" alt="Аватар пользователя">
+          </div>
+        </div>
+      </nav>
+      <nav class="site-nav">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#">Вузы</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#">Колледжи</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#">Техникумы</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#">Училища</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#">Специальности</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#">Профессии</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#">Отзывы</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#">Учебным заведениям</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#">Тест на профориентацию</a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page-main">
+    <div class="broadcrumbs">
+      <div class="broadcrumbs__wrapper container">
+        <ul class="broadcrumbs__list">
+          <li class="broadcrumbs__item">
+            <a href="#">Москва</a>
+          </li>
+          <li class="broadcrumbs__item">
+            <a href="#">Высшее образование</a>
+          </li>
+          <li class="broadcrumbs__item">
+            <a href="#">Вузы</a>
+          </li>
+          <li class="broadcrumbs__item">
+            <a>МГТУ им. Н.Э. Баумана</a>
+          </li>
+        </ul>
       </div>
     </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
+    <section class="promo">
+      <h1 class="visually-hidden"></h1>
+      <div class="promo__wrapper container">
+        <div class="promo__images">
+          <img src="img/photo.jpg" width="1216" height="350" alt="Изображение университета">
+          <a href="#">Оставить отзыв</a>
+          <a href="#">Проверить шансы поступить</a>
+        </div>
+        <div class="promo__info">
+          <div class="promo__title">
+            <h2>Московский государственный технический
+              университет имени Н.Э. Бáумана</h2>
+            <ul class="promo__title-list">
+              <a data-favorite href="#">В избранное</a>
+              <a href="#" data-alert>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22 12C22 10.4087 21.3679 8.88258 20.2426 7.75736C19.1174 6.63214 17.5913 6 16 6C14.4087 6 12.8826 6.63214 11.7574 7.75736C10.6321 8.88258 10 10.4087 10 12C10 19 7 21 7 21H25C25 21 22 19 22 12Z"
+                    stroke="#A7A7A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M17.73 25C17.5542 25.3031 17.3019 25.5547 16.9982 25.7295C16.6946 25.9044 16.3504 25.9965 16 25.9965C15.6496 25.9965 15.3054 25.9044 15.0018 25.7295C14.6982 25.5547 14.4458 25.3031 14.27 25"
+                    stroke="#A7A7A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a href="#" data-share>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.7254 10.1429V18H15.2417V10.1429L13.0162 12.5L12 11.4842L15.9835 7L20 11.4842L18.9509 12.5L16.7254 10.1429ZM7 15V23V24H8H24H25V23V15H23V22H9V15H7Z"
+                    fill="#A7A7A7" />
+                </svg>
+              </a>
+            </ul>
+          </div>
+          <ul class="promo__info-list">
+            <li class="promo__info-item">
+              <b>2.4</b>(75 отзывов)
+            </li>
+            <li>
+              <span>Москва, ул. Новочеремушкинская, д. 69</span>
+            </li>
+            <li>
+              <span>Приемная комиссия: 7 (499) 181 21 33</span>
+            </li>
+          </ul>
+          <p class="promo__service">
+            <a href="#">Обновлено 11.11.2011</a>
+            <a href="#">Сообщить об ошибке</a>
+          </p>
         </div>
       </div>
-    </div>
-
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
-</html>
+    </section>
