@@ -1,0 +1,57 @@
+.user-nav {
+  display: flex;
+  padding: 12px 0;
+  align-items: center;
+}
+
+.user-nav__cityes {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 16px;
+  gap: 8px;
+  flex-grow: 0.12;
+  position: relative;
+}
+
+.user-nav__list {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.user-nav__spec {
+  flex-grow: 1;
+}
+
+[name="spec"] {
+  padding: 14px 48px;
+  border: none;
+  border-radius: 100px;
+  background-color: $color-gray;
+  width: 77%;
+
+  &::placeholder {
+    text-align: center;
+    transform: translateX(20px);
+  }
+}
+
+.user-nav__login {
+  display: flex;
+  justify-self: flex-end;
+  align-items: center;
+  gap: 40px;
+}
+
+.user-nav__login-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-nav__login-avatar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
