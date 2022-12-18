@@ -1,4 +1,5 @@
 .modal {
+  display: none;
   position: absolute;
   width: 384px;
   // min-height: 416px;
@@ -8,6 +9,10 @@
   border-radius: 10px;
   box-shadow: 0px 7px 38px rgba(44, 62, 106, 0.25);
   z-index: 100;
+
+  &--hidden {
+    display: block;
+  }
 }
 
 .modal__animation {
@@ -16,6 +21,10 @@
   align-items: center;
   height: 60px;
   padding: 15px 16px;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .modal__animation-item {
@@ -49,6 +58,10 @@
   padding: 16px 16px 15px;
   gap: 5px;
   border-bottom: 1px solid $color-gray-border;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .modal__city-item {
@@ -77,18 +90,28 @@
   padding: 10px 16px 0;
   overflow-y: scroll;
   margin-bottom: 30px;
+
+  &--hidden {
+    display: none;
+  }
 }
 
-.modal__list ul {
+.modal__region-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.modal__list li {
+.modal__region-item {
   display: flex;
   flex-direction: column;
-  padding: 11px 0;
+  padding: 5px 0;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $color-gray-border;
+
+  }
 }
 
 .modal__region p {
