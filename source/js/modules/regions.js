@@ -4,6 +4,7 @@ const URL = 'https://studika.ru/api/areas';
 const METHOD = 'POST';
 const AREA = 'area';
 
+
 const userNavCityes = document.querySelector('.user-nav__cityes');
 const modal = document.querySelector('.modal');
 const animation = modal.querySelector('.modal__animation');

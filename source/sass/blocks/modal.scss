@@ -73,7 +73,8 @@
   padding: 9px 13px 9px 16px;
   border-radius: 100px;
   color: $color-default-white;
-
+  animation-name: addElement;
+  animation-duration: 0.5s;
 }
 
 .modal__city-btn {
@@ -88,13 +89,31 @@
 .modal__list {
   max-height: 200px;
   padding: 10px 16px 0;
-  overflow-y: scroll;
+  overflow: auto;
   margin-bottom: 30px;
 
   &--hidden {
     display: none;
   }
 }
+
+// for Chrome< Safari
+
+.modal__list {
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $color-blue;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-blue-dark;
+  }
+}
+
 
 .modal__region-list {
   list-style: none;
@@ -146,13 +165,29 @@
   0% {
     opacity: 0;
   }
-
   50% {
     opacity: 1;
   }
-
   100% {
     opacity: 0.1;
     transform: scale(3);
+  }
+}
+
+@keyframes addElement {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes removeElement {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
