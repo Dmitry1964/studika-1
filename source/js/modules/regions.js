@@ -1,4 +1,4 @@
-import { request } from "../main.js";
+import { request } from '../main.js';
 
 const URL = 'https://studika.ru/api/areas';
 const METHOD = 'POST';
@@ -7,35 +7,15 @@ const AREA = 'area';
 const userNavCityes = document.querySelector('.user-nav__cityes');
 const modal = document.querySelector('.modal');
 const animation = modal.querySelector('.modal__animation');
-const modalCytyList = modal.querySelector('.modal__city-list');
-
-
-// const request = (URL, METHOD, body) => {
-//   fetch(
-//     URL,
-//     {
-//       method: METHOD,
-//       body: body,
-//     },
-//   )
-//     .then((response) => response.json())
-//     .then((data) => {
-//       onSucses(data);
-//     })
-//     .catch(() => {
-//       onError();
-//     });
-// };
 
 const onSucses = (data) => {
   setRegionsList(data);
   animation.classList.add('modal__animation--hidden');
-  // console.log(data);
-}
+};
 
 const onError = () => {
   console.log('error');
-}
+};
 
 const onUserNavCityesClick = () => {
   if (!userNavCityes.getAttribute('data-load')) {
@@ -45,7 +25,7 @@ const onUserNavCityesClick = () => {
   } else {
     modal.classList.add('modal--hidden');
   }
-}
+};
 
 // формируем список городов и регионов
 
@@ -55,10 +35,10 @@ const setRegionsList = (data) => {
   data.forEach((region) => {
     const modalRegion = document.createElement('div');
     const nameRegion = document.createElement('p');
-    const modalRegionList = document.createElement('ul')
+    const modalRegionList = document.createElement('ul');
 
     modalRegion.classList.add('modal__region');
-    modalRegionList.classList.add('modal__region-list')
+    modalRegionList.classList.add('modal__region-list');
     nameRegion.textContent = region.name;
     modalList.append(modalRegion);
     modalRegion.append(nameRegion);
@@ -80,11 +60,11 @@ const setRegionsList = (data) => {
         modalRegionList.append(modalRegionItem);
         modalRegionItem.append(modalCity);
         modalRegionItem.append(modalCityRegion);
-      })
+      });
     }
-  })
-}
+  });
+};
 
 userNavCityes.addEventListener('click', onUserNavCityesClick);
 
-export { onSucses, onError }
+export { onSucses, onError, modal };

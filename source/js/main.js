@@ -1,4 +1,5 @@
-import { onSucses, onError } from "./modules/regions";
+import { onSucses, onError } from './modules/regions';
+import './modules/cities.js';
 
 const request = (URL, METHOD, body) => {
   fetch(
