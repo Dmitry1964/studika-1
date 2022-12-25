@@ -1,5 +1,6 @@
 import { modal } from './regions';
 
+
 // cityCurrent - имя выбранного города в общем списке
 // itemCurrent - элемент по которому кликаем (элемент <li>)
 // currentCityList - список выбранных городов (элемент <li>)
@@ -8,10 +9,10 @@ const modalList = modal.querySelector('.modal__list');
 const modalCityList = modal.querySelector('.modal__city-list');
 
 const onCitiesListClick = (evt) => {
-  const itemCurrent = evt.target.closest('li');
+  const itemCurrent = evt.target.closest('div');
   const cityCurrent = evt.target.closest('span');
 
-  if (cityCurrent.classList.contains('modal__city-region')) {
+  if (cityCurrent.classList.contains('modal__city-region') || cityCurrent.classList.contains('modal__region-area')) {
     return;
   }
   // открываем список выбранных городов
@@ -59,9 +60,13 @@ const isCurrent = (element) => {
   }
 };
 
-const onModalCityListClick = () => {
-
-}
+const onModalCityListClick = (evt) => {
+  const element = evt.target.closest('li');
+  const button = evt.target.closest('button');
+  if (button) {
+    element.remove();
+  }
+};
 
 modalList.addEventListener('click', onCitiesListClick);
 modalCityList.addEventListener('click', onModalCityListClick);

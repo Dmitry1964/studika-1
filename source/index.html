@@ -19,9 +19,9 @@
         <img class="user-nav__logo" src="img/svg/logo.svg" width="88" height="32" alt="Логотип">
         <div class="user-nav__cityes">
           <img src="img/svg/city.svg" width="32" height="32" alt="Иконка выбор города">
-          <div class="user-nav__list">
-            <span>Любой город</span>
-          </div>
+          <p class="user-nav__list">
+            Любой регион
+          </p>
           <article class="modal">
             <div class="modal__input">
               <input class="modal__input-field" type="text" name="sities" id="sities"
@@ -31,16 +31,11 @@
               <div class="modal__animation-item"></div>
             </div>
             <ul class="modal__city-list modal__city-list--hidden">
-              <!-- <li class="modal__city-item">
-                <span>Москва</span>
-                <button class="modal__city-btn"></button>
-              </li> -->
             </ul>
-            <div class="modal__list modal__list--hidden">
+            <div class="modal__list">
             </div>
             <button class="modal__button">Сохранить</button>
           </article>
-
         </div>
         <div class="user-nav__spec">
           <input type="text" name="spec" id="spec" placeholder="Учебное заведение, специальность или профессия">
@@ -61,49 +56,53 @@
         </div>
       </nav>
       <nav class="site-nav">
-        <button class="site-nav__btn-prev  site-nav__btn"></button>
-        <ul class="site-nav__list">
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Вузы</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Колледжи</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Техникумы</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Училища</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Специальности</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Профессии</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Отзывы</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Учебным&nbsp;заведениям</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Тест&nbsp;на&nbsp;профориентацию</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Профессии</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Отзывы</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Учебным заведениям</a>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Тест на профориентацию</a>
-          </li>
-        </ul>
-        <button class="site-nav__btn-next site-nav__btn"></button>
+        <button class="site-nav__btn--prev  site-nav__btn site-nav__btn--hidden"></button>
+        <div class="site-nav__wrapper">
+          <ul class="site-nav__list">
+            <li class="site-nav__item site-nav__item--first site-nav__item--first">
+              <a class="site-nav__link" href="#">Вузы</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Колледжи</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Техникумы</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Училища</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Специальности</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Профессии</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Отзывы</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Учебным&nbsp;заведениям</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Тест&nbsp;на&nbsp;профориентацию</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Профессии</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Отзывы</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Учебным&nbsp;заведениям</a>
+            </li>
+            <li class="site-nav__item site-nav__item--last">
+              <a class="site-nav__link" href="#">Тест&nbsp;на&nbsp;профориентацию</a>
+            </li>
+          </ul>
+
+        </div>
+        <button class="site-nav__btn--next site-nav__btn">
+        </button>
       </nav>
     </div>
   </header>

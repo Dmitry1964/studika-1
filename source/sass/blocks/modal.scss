@@ -97,7 +97,7 @@
   }
 }
 
-// for Chrome< Safari
+// for Chrome, Safari
 
 .modal__list {
 
@@ -114,14 +114,20 @@
   }
 }
 
+// fot Firefox
 
-.modal__region-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.modal__list {
+  scrollbar-width: thin;
+  scrollbar-color: $color-blue-dark $color-blue;
 }
 
-.modal__region-item {
+// .modal__region-list {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+// }
+
+.modal__region {
   display: flex;
   flex-direction: column;
   padding: 5px 0;
@@ -131,12 +137,16 @@
     background-color: $color-gray-border;
 
   }
+
+  &--hidden {
+    display: none;
+  }
 }
 
-.modal__region p {
-  margin: 0;
-  padding: 11px 0;
-}
+// .modal__region p {
+//   margin: 0;
+//   padding: 11px 0;
+// }
 
 .modal__city-region {
   font-size: 12px;
@@ -165,9 +175,11 @@
   0% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0.1;
     transform: scale(3);
@@ -178,6 +190,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -187,6 +200,7 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
