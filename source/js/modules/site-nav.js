@@ -1,6 +1,8 @@
 let translate = 0;
 const step = 200;
 
+// Перемещение элементов меню при действии на кноаки next & prev
+
 const siteNav = document.querySelector('.site-nav');
 const lastItem = siteNav.querySelector('.site-nav__item--last');
 const siteNavList = siteNav.querySelector('.site-nav__list');

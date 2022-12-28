@@ -17,11 +17,13 @@
     <div class="header__wrapper container">
       <nav class="user-nav">
         <img class="user-nav__logo" src="img/svg/logo.svg" width="88" height="32" alt="Логотип">
-        <div class="user-nav__cityes">
-          <img src="img/svg/city.svg" width="32" height="32" alt="Иконка выбор города">
-          <p class="user-nav__list">
-            Любой регион
-          </p>
+        <div class="user-nav__wrapper">
+          <div class="user-nav__cityes">
+            <img src="img/svg/city.svg" width="32" height="32" alt="Иконка выбор города">
+            <p class="user-nav__list">
+              Любой регион
+            </p>
+          </div>
           <article class="modal">
             <div class="modal__input">
               <input class="modal__input-field" type="text" name="sities" id="sities"
@@ -34,6 +36,7 @@
             </ul>
             <div class="modal__list">
             </div>
+            <div class="modal__list-select"></div>
             <button class="modal__button">Сохранить</button>
           </article>
         </div>
@@ -99,13 +102,49 @@
               <a class="site-nav__link" href="#">Тест&nbsp;на&nbsp;профориентацию</a>
             </li>
           </ul>
-
         </div>
         <button class="site-nav__btn--next site-nav__btn">
         </button>
       </nav>
     </div>
   </header>
+  <main class="page-main">
+    <div class="page-main__wrapper container">
+      <div class="broadcrumbs">
+        <ul class="broadcrumbs__list">
+          <li class="broadcrumbs__item">
+            <a class="broadcrumbs__link" href="#">Москва</a>
+          </li>
+          <li class="broadcrumbs__item">
+            <a class="broadcrumbs__link" href="#">Высшее образование</a>
+          </li>
+          <li class="broadcrumbs__item">
+            <a class="broadcrumbs__link" href="#">Вузы</a>
+          </li>
+          <li class="broadcrumbs__item">
+            <a class="broadcrumbs__link" href="#">МГТУ им. Н.Э. Баумана</a>
+          </li>
+        </ul>
+      </div>
+      <section class="promo">
+        <h2 class="visually-hidden">Информация о ВУЗе</h2>
+        <div class="promo__wrapper">
+          <div class="promo__image">
+            <picture>
+              <img src="img/photo.jpg" width="1216" height="350" alt="Фотография ВУЗа">
+            </picture>
+            <div class="promo__buttons">
+              <button class="promo__button-feedback">Оставить отзыв</button>
+              <button class="promo__button-chance">Проверить шансы поступить</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <p>
+      <span class="sub-string">dfgrt</span><span>bbbbbbb</span>
+    </p>
+  </main>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

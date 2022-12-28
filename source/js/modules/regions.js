@@ -23,7 +23,8 @@ const onUserNavCityesClick = () => {
     modal.classList.add('modal--hidden');
     userNavCityes.setAttribute('data-load', 'ok');
     request(onSucses, onError, URL, METHOD);
-  } else {
+  };
+  if (userNavCityes.getAttribute('data-load')) {
     modal.classList.add('modal--hidden');
   }
 };
@@ -45,7 +46,7 @@ const setRegionsList = (data) => {
     if (region.type === AREA) {
       region.cities.forEach((elem) => {
         const modalRegion1 = document.createElement('div');
-        const nameCity = document.createElement('span');
+        const nameCity = document.createElement('p');
         const nameRegion1 = document.createElement('span');
         modalRegion1.classList.add('modal__region');
         modalRegion1.setAttribute('data-city', elem.name);
@@ -61,16 +62,16 @@ const setRegionsList = (data) => {
   });
 };
 
-const onWindowClick = (evt) => {
-  if (evt.target.closest('article')) {
-    return;
-  } else {
-    modal.classList.remove('modal--hidden');
-    // console.log(evt.target);
-  }
-};
+// const onWindowClick = (evt) => {
+//   if (evt.target.closest('article')) {
+//     return;
+//   } else {
+//     modal.classList.remove('modal--hidden');
+//     // console.log(evt.target);
+//   }
+// };
 
 userNavCityes.addEventListener('click', onUserNavCityesClick);
 // window.addEventListener('click', onWindowClick);
 
-export { onSucses, onError, modal };
+export { modal };

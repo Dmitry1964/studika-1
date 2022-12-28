@@ -22,5 +22,4 @@ const request = (onSucses, onError, URL, METHOD, body) => {
     });
 };
 
-
 export { request };

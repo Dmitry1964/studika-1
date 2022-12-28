@@ -1,5 +1,6 @@
 import { modal } from './regions';
 
+// обработка события при выборе города из списка регионов и городов
 
 // cityCurrent - имя выбранного города в общем списке
 // itemCurrent - элемент по которому кликаем (элемент <li>)
@@ -10,7 +11,7 @@ const modalCityList = modal.querySelector('.modal__city-list');
 
 const onCitiesListClick = (evt) => {
   const itemCurrent = evt.target.closest('div');
-  const cityCurrent = evt.target.closest('span');
+  const cityCurrent = evt.target.closest('p');
 
   if (cityCurrent.classList.contains('modal__city-region') || cityCurrent.classList.contains('modal__region-area')) {
     return;

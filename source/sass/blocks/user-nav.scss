@@ -4,12 +4,15 @@
   align-items: center;
 }
 
+.user-nav__wrapper {
+  position: relative;
+}
+
 .user-nav__cityes {
   display: flex;
   flex-wrap: nowrap;
   padding-left: 16px;
   gap: 8px;
-  position: relative;
   cursor: pointer;
   max-width: 170px;
 }
@@ -33,7 +36,7 @@
   padding: 14px 48px;
   border: none;
   border-radius: 100px;
-  background-color: $color-gray;
+  background-color: $color-white-smoke;
   width: 77%;
 
   &::placeholder {
