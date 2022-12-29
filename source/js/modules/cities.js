@@ -8,6 +8,7 @@ import { modal } from './regions';
 
 const modalList = modal.querySelector('.modal__list');
 const modalCityList = modal.querySelector('.modal__city-list');
+const modalListSelect = modal.querySelector('.modal__list-select')
 
 const onCitiesListClick = (evt) => {
   const itemCurrent = evt.target.closest('div');
@@ -70,5 +71,6 @@ const onModalCityListClick = (evt) => {
 };
 
 modalList.addEventListener('click', onCitiesListClick);
+modalListSelect.addEventListener('click', onCitiesListClick);
 modalCityList.addEventListener('click', onModalCityListClick);
 

@@ -40,6 +40,27 @@
 
 .modal__input {
   padding: 0 16px;
+  position: relative;
+}
+
+.modal__input-btn {
+  position: absolute;
+  color: $color-gray;
+  width: 32px;
+  height: 32px;
+  right: 32px;
+  top: 6px;
+  background-color: transparent;
+  border: 0;
+  background-image: url("../img/svg/close-black.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 0.5s ease;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .modal__input-field {
@@ -89,6 +110,11 @@
   background-color: transparent;
   background-image: url("/../img/svg/close.svg");
   cursor: pointer;
+  transition: opacity 0.5s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .modal__list {
@@ -135,12 +161,6 @@
   scrollbar-color: $color-blue-dark $color-blue;
 }
 
-// .modal__region-list {
-//   list-style: none;
-//   padding: 0;
-//   margin: 0;
-// }
-
 .modal__region {
   display: flex;
   flex-direction: column;
@@ -156,11 +176,6 @@
     display: none;
   }
 }
-
-// .modal__region p {
-//   margin: 0;
-//   padding: 11px 0;
-// }
 
 .modal__city-region {
   font-size: 12px;
