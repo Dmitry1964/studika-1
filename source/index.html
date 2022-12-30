@@ -16,6 +16,7 @@
   <header class="header">
     <div class="header__wrapper container">
       <nav class="user-nav">
+        <button class="user-nav__btn user-nav__btn--hidden"></button>
         <img class="user-nav__logo" src="img/svg/logo.svg" width="88" height="32" alt="Логотип">
         <div class="user-nav__wrapper">
           <div class="user-nav__cityes">
@@ -42,6 +43,13 @@
           </article>
         </div>
         <div class="user-nav__spec">
+          <svg class="user-nav__search" width="32" height="32" viewBox="0 0 32 32" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M9.7 15.65C9.7 12.3639 12.3639 9.7 15.65 9.7C18.9361 9.7 21.6 12.3639 21.6 15.65C21.6 17.2528 20.9662 18.7076 19.9356 19.7774C19.9063 19.7999 19.8781 19.8246 19.8513 19.8515C19.8245 19.8783 19.7998 19.9065 19.7773 19.9358C18.7075 20.9663 17.2527 21.6 15.65 21.6C12.3639 21.6 9.7 18.9361 9.7 15.65ZM20.4249 21.6272C19.1162 22.674 17.4562 23.3 15.65 23.3C11.425 23.3 8 19.875 8 15.65C8 11.425 11.425 8 15.65 8C19.875 8 23.3 11.425 23.3 15.65C23.3 17.4563 22.674 19.1164 21.627 20.4251L24.7509 23.549C25.0828 23.8809 25.0828 24.4191 24.7509 24.751C24.4189 25.083 23.8807 25.083 23.5488 24.751L20.4249 21.6272Z"
+              fill="#A7A7A7" />
+          </svg>
+
           <input type="text" name="spec" id="spec" placeholder="Учебное заведение, специальность или профессия">
         </div>
         <div class="user-nav__login">
@@ -110,8 +118,8 @@
     </div>
   </header>
   <main class="page-main">
-    <div class="page-main__wrapper container">
-      <div class="broadcrumbs">
+    <div class="page-main__wrapper">
+      <div class="broadcrumbs container">
         <ul class="broadcrumbs__list">
           <li class="broadcrumbs__item">
             <a class="broadcrumbs__link" href="#">Москва</a>
@@ -126,25 +134,44 @@
             <a class="broadcrumbs__link" href="#">МГТУ им. Н.Э. Баумана</a>
           </li>
         </ul>
+        <div class="broadcrumbs__button">
+          <a class="broadcrumbs__link" href="#">Назад</a>
+        </div>
       </div>
       <section class="promo">
         <h2 class="visually-hidden">Информация о ВУЗе</h2>
         <div class="promo__wrapper">
-          <div class="promo__image">
+          <div class="promo__banner container">
             <picture>
-              <img src="img/photo.jpg" width="1216" height="350" alt="Фотография ВУЗа">
+              <source media="(max-width: 767px)" srcset="img/photo-mobile.jpg 1x, img/photo-mobile@2x.jpg 2x">
+              <img src="img/photo.jpg" srcset="img/photo@2x.jpg 2x" alt="Фотография ВУЗа">
             </picture>
             <div class="promo__buttons">
-              <button class="promo__button-feedback">Оставить отзыв</button>
-              <button class="promo__button-chance">Проверить шансы поступить</button>
+              <button class="promo__button promo__button--feedback">Оставить отзыв</button>
+              <button class="promo__button promo__button--chance">Проверить шансы поступить</button>
+            </div>
+          </div>
+          <div class="promo__info container">
+            <h2 class="promo__title">Московский государственный технический
+              университет имени&nbsp;Н.Э.&nbsp;Бáумана</h2>
+            <div class="promo__links">
+              <a class="promo__link-like" href="#">В Избранное</a>
+              <a class="promo__link-notify" href="#"></a>
+              <a class="promo__link-share" href="#"></a>
+            </div>
+            <div class="promo__contacts">
+              <p class="promo__contacts-comment"><b>2.4</b>(75 отзывов)</p>
+              <p class="promo__contacts-address">Москва, ул. Новочеремушкинская, д. 69</p>
+              <p class="promo__contacts-phone">Приемная комиссия: 7 (499) 181 21 33</p>
+            </div>
+            <div class="promo__service">
+              <p>Обновлено 11.11.2011</p>
+              <a class="promo__service-link" href="#">Сообщить об ошибке</a>
             </div>
           </div>
         </div>
       </section>
     </div>
-    <p>
-      <span class="sub-string">dfgrt</span><span>bbbbbbb</span>
-    </p>
   </main>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>

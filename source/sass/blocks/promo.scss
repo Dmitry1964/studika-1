@@ -1,0 +1,307 @@
+.promo__wrapper {
+
+  @include vp-1023 {
+    position: relative;
+    // padding-bottom: 48px;
+  }
+}
+
+.promo__banner {
+  position: relative;
+
+  @include vp-1023 {
+    position: static;
+  }
+
+  @include vp-767 {
+    width: 100vw;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.promo__wrapper img {
+
+  width: 100%;
+  object-fit: cover;
+
+  @include vp-1023 {
+    // height: 270px;
+  }
+
+  @include vp-374 {
+    height: 122px;
+  }
+}
+
+.promo__buttons {
+  display: flex;
+  gap: 16px;
+  position: absolute;
+  right: 10%;
+  bottom: 7%;
+
+  @include vp-1023 {
+    right: 0;
+    bottom: 16px;
+    padding: 0 16px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.promo__button {
+  font-family: $ff-second;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+  padding: 16px 24px;
+  border-radius: 5px;
+  border: none;
+}
+
+.promo__button--feedback {
+  background-color: $color-blue-dark;
+  color: $color-default-white;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.promo__button--chance {
+  background-color: $color-solitude;
+  color: $color-blue-dark;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.promo__info {
+  display: grid;
+  grid-template-columns: 1fr 289px;
+  justify-content: flex-start;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: $color-default-white;
+
+
+  @include vp-1023 {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    min-height: 246px;
+  }
+}
+
+.promo__info h2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  font-family: $ff-second;
+  font-weight: 500;
+  font-size: 31px;
+  line-height: 36px;
+  margin: 0;
+  padding-left: 24px;
+  width: 90%;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 22px;
+    padding-left: 0;
+    // grid-column-end: 3;
+  }
+}
+
+.promo__links {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-self: end;
+  align-items: center;
+  padding-right: 24px;
+
+  @include vp-1023 {
+    position: absolute;
+    top: 35%;
+    right: 8%;
+    padding-right: 0;
+  }
+
+  @include vp-629 {
+    top: 25%;
+  }
+
+  @include vp-374 {
+    top: 20%;
+  }
+}
+
+.promo__link-like {
+  padding: 9px 16px 9px 40px;
+  border: 1px solid $color-gray-border;
+  border-radius: 49px;
+  height: 40px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 10px;
+    left: 16px;
+    background-image: url("../img/svg/favorite.svg");
+    background-position: center;
+  }
+
+  @include vp-1023 {
+    background-color: $color-default-white;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.promo__link-notify {
+  width: 32px;
+  height: 32px;
+  background-image: url("../../img/svg/bell.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+
+  @include vp-1023 {
+    background-color: $color-default-white;
+  }
+}
+
+.promo__link-share {
+  width: 32px;
+  height: 32px;
+  background-image: url("../../img/svg/share.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+
+  @include vp-1023 {
+    background-color: $color-default-white;
+  }
+}
+
+.promo__contacts {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 24px;
+  padding-top: 6px;
+
+  @include vp-1023 {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.promo__contacts p {
+  font-size: 16px;
+  line-height: 30px;
+  color: $color-gray;
+  margin: 0;
+  position: relative;
+
+  @include vp-767 {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+.promo__contacts-comment {
+  padding-left: 22px;
+
+  @include vp-767 {
+    order: 1;
+  }
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 5px;
+    left: 0;
+    background-image: url("../img/svg/star.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.promo__contacts p:nth-child(n + 2) {
+  padding-left: 38px;
+
+  @include vp-767 {
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 12px;
+    left: 16px;
+    border-radius: 50%;
+    background-color: $color-gray;
+  }
+}
+
+.promo__service {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-self: end;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding-top: 16px;
+  padding-right: 24px;
+
+  @include vp-1023 {
+    padding: 0;
+  }
+
+  @include vp-767 {
+    position: absolute;
+    bottom: -40px;
+  }
+}
+
+.promo__service p {
+  font-size: 12px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.promo__service-link {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $color-blue-dark;
+}
