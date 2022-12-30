@@ -5,6 +5,7 @@ import { request } from '../main.js';
 const URL = 'https://github.com/gencebay/httplive';
 const METHOD = 'POST';
 const userNavList = document.querySelector('.user-nav__list');
+const pageMain = document.querySelector('.page-main');
 
 const submitButton = modal.querySelector('.modal__button');
 const cities = new Set();
@@ -44,4 +45,10 @@ const onError = () => {
   userNavList.textContent = 'Любой регион';
 };
 
+const onPageClick = () => {
+  modal.classList.remove('modal--hidden');
+};
+
+
 submitButton.addEventListener('click', onSubmitButtonClick);
+pageMain.addEventListener('click', onPageClick);
